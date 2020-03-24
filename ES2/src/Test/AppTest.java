@@ -1,5 +1,6 @@
 package Test;
 
+import App.App;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -39,5 +40,44 @@ public class AppTest
     {
         assertTrue( true );
     }
-   
+    
+    /**
+     * Test.
+     */
+    @org.junit.Test
+    public void test() {
+    	App a = new App();
+    	assertEquals(1, a.getNumber());
+    }
+    
+    /**
+     * Test 1.
+     */
+    @org.junit.Test
+    public void test1() {
+    	App a = new App();
+    	int number = 5;
+    	assertTrue(a.impar(number));
+    }
+    
+    /**
+     * Test 2.
+     */
+    @org.junit.Test
+    public void test2() {
+    	App a = new App();
+    	a.change_number();
+    	int number = 2;
+    	assertEquals(2, a.getNumber());
+    }
+    
+    /**
+     * Test 3.
+     */
+    @org.junit.Test
+    public void test3() {
+    	App a = new App();
+    	int number = 4;
+    	assertFalse(a.impar(number));
+    }
 }
